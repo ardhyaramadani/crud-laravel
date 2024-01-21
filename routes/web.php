@@ -59,7 +59,9 @@ Route::get('/categories', function()
 
 
 Route::get('/login.index', [LoginController::class, 'index']);
+
 Route::get('/register.index', [RegisterController::class, 'index']);
+Route::post('/register.index', [RegisterController::class, 'store']);
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
