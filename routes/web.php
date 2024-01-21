@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 
 
@@ -57,7 +58,11 @@ Route::get('/categories', function()
 });
 
 
-Route::get('/index', [LoginController::class, 'index']);
+Route::get('/login.index', [LoginController::class, 'index']);
+Route::get('/register.index', [RegisterController::class, 'index']);
+
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
 
 
 

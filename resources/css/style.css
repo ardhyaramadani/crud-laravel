@@ -1,5 +1,4 @@
-
-  .form-signin .form-floating:focus-within {
+.form-signin .form-floating:focus-within {
     z-index: 2;
   }
   
@@ -15,3 +14,7 @@
     border-top-right-radius: 0;
   }
   
+  .form-registration {
+    border-radius: 0;
+    margin-bottom: -1px;
+  }
